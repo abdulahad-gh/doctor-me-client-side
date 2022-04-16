@@ -1,0 +1,59 @@
+.banner {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url('https://i.ibb.co/T4nvft2/bruno-rodrigues-279x-IHym-PYY-unsplash-1.jpg');
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.banner-desc {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 200px;
+}
+
+.banner-desc h1 {
+    font-size: 62px;
+}
+
+.banner-desc p {
+    margin: 10px 0 40px;
+
+
+}
+
+.know-more-btn {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 12px 34px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.know-more-btn:hover {
+    border: 2px solid blue;
+    background-color: blue;
+    transition: .5s;
+    color: #fff;
+}
+
+
+
+
+/* responsive for mobile  */
+@media (max-width: 576px) {
+    .banner-desc {
+        padding-top: 300px;
+    }
+}
