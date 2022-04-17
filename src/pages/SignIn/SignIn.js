@@ -21,20 +21,15 @@ const SignIn = () => {
     if (user || userGoogle) {
         navigate(from, { replace: true });
     }
-    const passResetHandle = () => {
-        if (email === "") {
-            alert('enter your email')
-            return
-        }
-        sendPasswordResetEmail(email)
-        toast('sent passowrd reset mail')
-    }
     const userHandle = e => {
         e.preventDefault()
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-        signInWithEmailAndPassword(email, password)
+        if (email && password) {
+            signInWithEmailAndPassword(email, password)
+        }
+
     }
     return (
         <div className='w-25 mx-auto mt-5 px-5 pb-2 rounded' style={{ marginBottom: '140px', backgroundColor: 'gray' }}>
@@ -43,7 +38,7 @@ const SignIn = () => {
             <form onSubmit={userHandle}>
                 <div className="form-group">
 
-                    <input type="email" onBlur={(e) => setEmail(e.target.value)} name="email" className="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input type="email" onBlur={(e) => setEmail(e.target.value)} name="email" className="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
 
                 </div>
                 <div className="form-group">
@@ -51,7 +46,14 @@ const SignIn = () => {
                     <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                 </div>
                 <p className='text-white mb-0 mt-2'>don't Account?Please <Link to='/sign-up' className='text-warning'>SignUp</Link></p>
-                <p className='text-white'>forget password<button onClick={passResetHandle} className='text-danger btn '> Reset</button></p>
+                <p className='text-white'>forget password<button onClick={() => {
+                    if (email === "") {
+                        alert('enter your email')
+                        return
+                    }
+                    sendPasswordResetEmail(email)
+                    toast('sent passowrd reset mail')
+                }} className='text-danger btn '> Reset</button></p>
                 <div className='d-flex gap-2'>
                     <button type="submit" className="btn btn-primary mt-3 mb-4">SignIn</button>
                     <p className="btn btn-primary mt-3 mb-4" onClick={() => signInWithGoogle()}>SignInWithGoogle</p>

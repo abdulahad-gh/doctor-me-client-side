@@ -1,11 +1,21 @@
 # Doctor Me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+project Live Site [Doctor Me](https://doctor-me-9094b.web.app/).
 
-## Available Scripts
+## features and functionality
 
-In the project directory, you can run:
+* service section.
+* client says section.
+* private Route.
+* SignIn and LogIn Features.
+* Email verify and also password reset.
 
+## technologies 
+* react firebase hooks
+* react
+* react router
+* bootstrap
+* toast
 ### `npm start`
 
 Runs the app in the development mode.\
