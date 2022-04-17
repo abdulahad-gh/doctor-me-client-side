@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import Blogs from './pages/Blogs/Blogs';
 import About from './pages/About/About';
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/sign-up' element={<SignUp />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </>

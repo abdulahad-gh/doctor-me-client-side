@@ -53,7 +53,7 @@ const SignUp = () => {
                 <p className='text-white mb-0 mt-2'>Already Account? Please <Link to='/sign-in' className='text-primary font-weight-bold'>SignIn</Link></p>
 
                 <button type="submit" class="btn btn-primary mt-3 mb-4">SignUp</button>
-                <p className='text-danger bg-white'>{error?.message}{passError}</p>
+                <p className='text-danger bg-white rounded'>{error?.message}{passError}</p>
             </form>
         </div>
     );

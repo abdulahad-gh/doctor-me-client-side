@@ -46,7 +46,7 @@ const SignIn = () => {
                     <button type="submit" className="btn btn-primary mt-3 mb-4">SignIn</button>
                     <p className="btn btn-primary mt-3 mb-4" onClick={() => signInWithGoogle()}>SignInWithGoogle</p>
                 </div>
-                <p className='text-danger bg-white'>{error?.message}</p>
+                <p className='text-danger bg-white rounded'>{error?.message}</p>
             </form>
 
         </div>
