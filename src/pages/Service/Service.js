@@ -10,7 +10,7 @@ const Service = ({ service }) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{desc}</p>
                 <p className="card-text mb-5">${price}</p>
-                <Link to="/" className="btn btn-primary position-absolute bottom-0 my-2">Check Out</Link>
+                <Link to="/check-out" className="btn btn-primary position-absolute bottom-0 my-2">Check Out</Link>
             </div>
         </div>
     );

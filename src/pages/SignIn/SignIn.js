@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase-init';
 
 const SignIn = () => {
@@ -14,8 +14,10 @@ const SignIn = () => {
     const [signInWithGoogle, userGoogle] = useSignInWithGoogle(auth);
 
     const navigate = useNavigate()
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     if (user || userGoogle) {
-        navigate('/')
+        navigate(from, { replace: true });
     }
     const userHandle = e => {
         e.preventDefault()
