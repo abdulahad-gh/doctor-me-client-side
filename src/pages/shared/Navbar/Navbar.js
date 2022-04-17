@@ -12,7 +12,7 @@ const Navbar = () => {
                     <Link class="navbar-brand" to="/">Doctor Me</Link>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <Link class="nav-link" aria-current="page" to="/">Home</Link>
+                            <a class="nav-link" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#services">Services</a>
