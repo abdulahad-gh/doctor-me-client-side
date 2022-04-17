@@ -9,7 +9,7 @@ const SignUp = () => {
         user,
         ,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const [passError, setPassError] = useState('')
     const navigate = useNavigate()
