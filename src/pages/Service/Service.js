@@ -4,7 +4,7 @@ const Service = ({ service }) => {
     const { name, desc, img, price } = service
 
     return (
-        <div className="card position-relative p-2 shadow" style={{ width: '18rem' }}>
+        <div className="card position-relative p-2 shadow rounded" style={{ width: '18rem' }}>
             <img className="card-img-top" height={200} src={img} alt="service-img" />
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>

@@ -4,20 +4,32 @@
         "name": "Lung Diseases",
         "desc": "Lung disease doesn’t play favourites. It affects men, women, children, smokers, non-smokers and individuals who have never smoked.",
         "img": "https://i.ibb.co/3mgvNjT/images.jpg",
-        "price": 1500
+        "price": 1500,
+        "clientRev": "Joness role at AdventHealth includes supporting a team of specialists who spiritually nurture team members at outpatient primary and specialty care clinics. Jones and his team also coach employees",
+        "clientImg": "https://i.ibb.co/25cYq39/images-2.png",
+        "clientName": "nayeem hasan",
+        "rating": "*****"
     },
     {
         "id": "625bdeabef4b69441a98ee45",
         "name": "Dental Service",
         "desc": "General dentists prevent, evaluate, diagnose, and treat diseases of the oral cavity, as well as maintain the function and appearance of the teeth. ",
         "img": "https://i.ibb.co/dLDhj8b/images.png",
-        "price": 2100
+        "price": 2100,
+        "clientRev": "I wasn't feeling good before joining as I was stressed due to this pandemic time .. after joining Ayuskama Ayurveda Institute it was such a great experience. I would like to thank Dr. karim ullah for helping me through out my treatment.",
+        "clientImg": "https://i.ibb.co/CtqDD7W/images-4.jpg",
+        "clientName": "farida banu",
+        "rating": "*****"
     },
     {
         "id": "625bdeab7a2bef092a02b4e2",
         "name": "Eye Care",
         "desc": "Eye problems can be easily prevented if you practice essential eye care habits everyday. Surprisingly, they are very practical.",
         "img": "https://i.ibb.co/P1d7v5Y/images-2.jpg",
-        "price": 3500
+        "price": 3500,
+        "clientRev": "Amazing knowledge delivered in an excellent way by dr.sharma. this is highly recommended stand out program.",
+        "clientImg": "https://i.ibb.co/2WQw6FS/images-3.jpg",
+        "clientName": "nowshin fariya",
+        "rating": "*****"
     }
 ]
