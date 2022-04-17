@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import auth from '../../firebase-init';
 
 const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
+        ,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
@@ -39,7 +39,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='w-25 mx-auto mt-5 px-5 pb-2 rounded' style={{ marginBottom: '170px', backgroundColor: 'gray' }}>
+        <div className='w-25 mx-auto mt-5 px-5 pb-2 rounded' style={{ marginBottom: '100px', backgroundColor: 'gray' }}>
 
             <h4 className='text-center py-2 text-white'>SignUp</h4>
             <form onSubmit={newUserHandle}>

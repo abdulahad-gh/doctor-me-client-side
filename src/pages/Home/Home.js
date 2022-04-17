@@ -9,14 +9,13 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
-    console.log(services)
     return (
         <>
             <div id='home' className='banner'>
-                <div class="banner-desc">
+                <div className="banner-desc">
                     <h1>I'm Dr.Karim Ullah</h1>
                     <p>heyi!! this is Karim. MBBS, FCPS (Surgery), Fellowship (Hepatobiliary Pancreatic Surgery and Liver Transplant)</p>
-                    <Link class="know-more-btn" to="/">Hit to Contact....</Link>
+                    <Link className="know-more-btn" to="/">Hit to Contact....</Link>
                 </div>
             </div>
             <div id='services' className='pt-5 pt-md-5 container'>

@@ -1,25 +1,52 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase-init';
 
 const SignIn = () => {
+    const [
+        signInWithEmailAndPassword,
+        user,
+        ,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const [signInWithGoogle, userGoogle] = useSignInWithGoogle(auth);
+
+    const navigate = useNavigate()
+    if (user || userGoogle) {
+        navigate('/')
+    }
+    const userHandle = e => {
+        e.preventDefault()
+
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        signInWithEmailAndPassword(email, password)
+    }
     return (
-        <div className='w-25 mx-auto mt-5 px-5 rounded' style={{ marginBottom: '170px', backgroundColor: 'gray' }}>
+        <div className='w-25 mx-auto mt-5 px-5 pb-2 rounded' style={{ marginBottom: '140px', backgroundColor: 'gray' }}>
 
             <h4 className='text-center py-2 text-white'>SignIn</h4>
-            <form>
-                <div class="form-group">
+            <form onSubmit={userHandle}>
+                <div className="form-group">
 
-                    <input type="email" class="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input type="email" name="email" className="form-control mb-2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
 
                 </div>
-                <div class="form-group">
+                <div className="form-group">
 
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    <input type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
                 </div>
                 <p className='text-white mb-0 mt-2'>don't Account?Please <Link to='/sign-up' className='text-warning'>SignUp</Link></p>
                 <p className='text-white'>forget password<Link to='/' className='text-danger'> Reset</Link></p>
-                <button type="submit" class="btn btn-primary mt-3 mb-4">SignIn</button>
+                <div className='d-flex gap-2'>
+                    <button type="submit" className="btn btn-primary mt-3 mb-4">SignIn</button>
+                    <p className="btn btn-primary mt-3 mb-4" onClick={() => signInWithGoogle()}>SignInWithGoogle</p>
+                </div>
+                <p className='text-danger bg-white'>{error?.message}</p>
             </form>
+
         </div>
     );
 };
