@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SignIn = () => {
     return (
-        <div className='w-25 mx-auto mt-5 px-5 rounded' style={{ marginBottom: '270px', backgroundColor: 'gray' }}>
+        <div className='w-25 mx-auto mt-5 px-5 rounded' style={{ marginBottom: '170px', backgroundColor: 'gray' }}>
 
             <h4 className='text-center py-2 text-white'>SignIn</h4>
             <form>
