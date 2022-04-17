@@ -1,0 +1,23 @@
+[
+    {
+        "id": "625bdeabbf9d4c9ab38fc3f5",
+        "name": "Lung Diseases",
+        "desc": "Lung disease doesn’t play favourites. It affects men, women, children, smokers, non-smokers and individuals who have never smoked.",
+        "img": "https://i.ibb.co/3mgvNjT/images.jpg",
+        "price": 1500
+    },
+    {
+        "id": "625bdeabef4b69441a98ee45",
+        "name": "Dental Service",
+        "desc": "General dentists prevent, evaluate, diagnose, and treat diseases of the oral cavity, as well as maintain the function and appearance of the teeth. ",
+        "img": "https://i.ibb.co/dLDhj8b/images.png",
+        "price": 2100
+    },
+    {
+        "id": "625bdeab7a2bef092a02b4e2",
+        "name": "Eye Care",
+        "desc": "Eye problems can be easily prevented if you practice essential eye care habits everyday. Surprisingly, they are very practical.",
+        "img": "https://i.ibb.co/P1d7v5Y/images-2.jpg",
+        "price": 3500
+    }
+]
