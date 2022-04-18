@@ -11,7 +11,7 @@ const ClientReviews = ({ client }) => {
             </div>
             <div className="">
                 <p className="card-text">{clientRev}</p>
-                <p className="card-text">{rating}</p>
+                <p className="card-text text-warning fs-2">{rating}</p>
             </div>
 
         </div>
