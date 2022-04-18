@@ -11,7 +11,7 @@ const Home = () => {
     }, [])
     return (
         <>
-            <div id='home' className='banner'>
+            <div id='banner' className='banner'>
                 <div className="banner-desc">
                     <h1>I'm Dr.Karim Ullah</h1>
                     <p>heyi!! this is Karim. MBBS, FCPS (Surgery), Fellowship (Hepatobiliary Pancreatic Surgery and Liver Transplant)</p>
